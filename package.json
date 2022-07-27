@@ -16,5 +16,8 @@
   "license": "MIT",
   "bin": {
     "htci": "./bin/index.js"
+  },
+  "dependencies": {
+    "yargs": "^17.5.1"
   }
 }
