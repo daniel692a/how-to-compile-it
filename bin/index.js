@@ -1,18 +1,26 @@
 #! /usr/bin/env node
 const yargs = require("yargs");
-const popularLangs = require("./popular");
+const popular = require("./popular.js");
+const utils = require("./utils.js");
+const cliBoxes = require("cli-boxes");
 
-console.log("Hello World");
+//var sentence = utils.parseSentence(yargs.argv._);
 
-const usage = `\nUsage:\n
-\t$ htci -c sentence to get the commands to compile all current files\n
-\t$ htci -p Gives the commands to compile of 10 popular programming languages.`;
+const usage = `\n💻Usage:\n
+👉\t$ htci <lang_extension>\n
+lang_extension: The language extension you want to know how to compile`;
 
 const options = yargs.usage(usage).option("c", {
     alias: "current",
-    describe: "List of all commands to compile currrent files.",
+    describe: "List the commands to compile the files it finds in your current directory.📂",
     type: "boolean",
     demandOption: false
 }).help(true).argv;
 
-//popularLangs.popular;
+if(yargs.argv._[0]==null){
+    utils.showHelp();
+}
+
+if(yargs.argv._ == 'cpp'){
+    console.log("g++ file.cpp");
+}

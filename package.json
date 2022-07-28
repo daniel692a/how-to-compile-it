@@ -18,6 +18,9 @@
     "htci": "./bin/index.js"
   },
   "dependencies": {
+    "boxen": "^7.0.0",
+    "cli-boxes": "^3.0.0",
+    "colors": "^1.4.0",
     "yargs": "^17.5.1"
   }
 }
