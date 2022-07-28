@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "bin/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +20,6 @@
   },
   "dependencies": {
     "boxen": "^7.0.0",
-    "cli-boxes": "^3.0.0",
     "colors": "^1.4.0",
     "yargs": "^17.5.1"
   }

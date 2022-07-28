@@ -1,12 +1,9 @@
-const yargs = require("yargs");
+import yargs from 'yargs';
 
-const currentLangs = yargs.option("c", {
+const currentLangs = {
     alias: "current",
-    describe: "List of all commands to compile currrent files.📂",
-    type: "boolean",
-    demandOption: false
-});
+    default: true,
+    global: false,
+}
 
-module.exports = {
-    currentLangs: currentLangs,
-};
+export default currentLangs;
